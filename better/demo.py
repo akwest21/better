@@ -39,7 +39,7 @@ def run_single(
     # Initialize a portfolio instance
     p = portfolio.Portfolio('Test')
     # p.read_raw_data_from_xlsx(data_path + 'portfolio.xlsx')
-    p.read_raw_data_from_xlsx(data_path + 'test2.xlsx')
+    p.read_raw_data_from_xlsx(data_path + 'edifes.xlsx')
 
     # Get building data from the portfolio
     building_id = bldg_id
@@ -138,7 +138,7 @@ def run_batch(
         s_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         data_path = s_path + '/Data/'
         p = portfolio.Portfolio('Test')
-        p.read_raw_data_from_xlsx(data_path + 'test2.xlsx')
+        p.read_raw_data_from_xlsx(data_path + 'edifes.xlsx')
 
         # 1 ~ electricity; 2 ~ fossil fuel
         dict_raw_electricity = p.get_portfolio_raw_data_by_spaceType_and_utilityType(space_type, utility_type=1)
