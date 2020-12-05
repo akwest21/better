@@ -113,7 +113,8 @@ class Report:
         return html_text
 
     def generate_building_report_beta(self, report_path):
-        report_file = report_path + str(self.building.bldg_id) + '_' + self.building.bldg_address + '_' + self.building.bldg_name + '_report.html'
+        report_file = report_path + str(self.building.bldg_id) + '_' + str(self.building.bldg_address) + '_' + str(self.building.bldg_name) + '_report.html'
+        report_file = str(report_file)
         report_file = report_file.replace(' ', '_')
         print(report_file)
         with open(report_file, 'w', encoding="utf-8") as report_html:
@@ -141,7 +142,7 @@ class Report:
             report_html.write('    <td class="td_border" colspan="3"><b>Building Type</b></td>')
             report_html.write('    <td class="td_border" colspan="3">' + self.building.bldg_type + '</td>')
             report_html.write('    <td class="td_border" colspan="3"><b>Building Location</b></td>')
-            report_html.write('    <td class="td_border" colspan="3">' + self.building.bldg_address + '</td>')
+            report_html.write('    <td class="td_border" colspan="3">' + str(self.building.bldg_address) + '</td>')
             report_html.write('  </tr>')
             report_html.write('  <tr>')
             report_html.write('    <td class="td_border" colspan="3"><b>Gross Floor Area (m<sup>2</sup>)</b></td>')
