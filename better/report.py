@@ -920,7 +920,7 @@ class Report:
                 tbstr += '        <tr>\n'
                 tbstr += '            <td><a href=' + report_path + str(self.portfolio.df_bldg_summary['Detail Report'][n]) + '>' + str(self.portfolio.df_bldg_summary['Building ID'][n]) + '</a></td>\n'
                 tbstr += '            <td>' + self.portfolio.df_bldg_summary['Building Name'][n] + '</td>\n'
-                tbstr += '            <td>' + self.portfolio.df_bldg_summary['Building Address'][n] + '</td>\n'
+                tbstr += '            <td>' + str(self.portfolio.df_bldg_summary['Building Address'][n]) + '</td>\n'
                 tbstr += '            <td>' + self.format_number(self.portfolio.df_bldg_summary['Building Area (m2)'][n]) + '</td>\n'
                 tbstr += '            <td>' + self.format_number(self.portfolio.df_bldg_summary['Building Annual Electricity Consumption (kWh)'][n]) + '</td>\n'
                 tbstr += '            <td>' + self.format_number(self.portfolio.df_bldg_summary['Building Annual Fossil Fuel Consumption (kWh)'][n]) + '</td>\n'

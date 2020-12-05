@@ -249,7 +249,8 @@ class Portfolio:
                 v_single_names.append(single_building.bldg_name)
                 v_single_address.append(single_building.bldg_address)
                 v_single_area.append(int(single_building.bldg_area))
-                rpt_path = (str(single_building.bldg_id) + '_' + single_building.bldg_address + '_' + single_building.bldg_name + '_report.html').replace(' ', '_')
+                rpt_path = (str(single_building.bldg_id), '_', single_building.bldg_address, '_', single_building.bldg_name, '_report.html')
+                rpt_path = str(rpt_path).replace(' ', '_')
                 v_rpt_path.append(rpt_path)
 
                 if hasattr(single_building, "recent_annual_electricity_kWh"):
